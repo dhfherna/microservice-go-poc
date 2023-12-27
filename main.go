@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/dhfherna/microservice-go-poc/entrypoints"
 	"github.com/gin-gonic/gin"
 )
 
@@ -20,6 +21,7 @@ func main() {
 			"message": "Welcome to my microservice!",
 		})
 	})
+	entrypoints.AlbumsController(router)
 
 	router.Run(fmt.Sprintf("%s:%s", *host, *port))
 }
