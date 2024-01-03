@@ -1,0 +1,10 @@
+{
+  "name": "Go + Postgres Dev Container",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [5432],
+  "settings": { 
+    "go.gopath": "/go",
+    "go.goroot": "/usr/local/go"
+  },
+  "extensions": ["golang.Go"]
+}
