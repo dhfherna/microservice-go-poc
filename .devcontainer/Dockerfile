@@ -1,8 +1,16 @@
 # Dockerfile
-FROM golang:1.21.5
+FROM mcr.microsoft.com/devcontainers/universal:2
 
-# Instala las herramientas de Go necesarias
-RUN go get github.com/go-delve/delve/cmd/dlv
+# Install Go
+RUN curl -O https://dl.google.com/go/go1.18.linux-amd64.tar.gz \
+    && tar -xvf go1.18.linux-amd64.tar.gz \
+    && mv go /usr/local \
+    && rm go1.18.linux-amd64.tar.gz
+
+# Set environment variables for Go
+ENV GOROOT=/usr/local/go
+ENV GOPATH=$HOME/go
+ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Instala Postgres
 RUN apt-get update && apt-get install -y postgresql postgresql-contrib
