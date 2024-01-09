@@ -1,6 +1,6 @@
 {	
 	"name": "Go & PostgreSQL",
-	"dockerComposeFile": "docker-compose.yml",
+	"dockerComposeFile": "docker-compose.yaml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
 
