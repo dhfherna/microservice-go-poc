@@ -19,10 +19,10 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"golang.Go",
-				"vscode.theme-defaults",
 				"GitHub.copilot",
 				"GitHub.copilot-chat",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"ms-vsliveshare.vsliveshare"
 			]
 		}
 	},
